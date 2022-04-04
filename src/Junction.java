@@ -23,18 +23,22 @@ public class Junction {
 		int passageRights[] = {0, 0, 0, 0};
 		for (int roadNum = 1 ;roadNum <= 4; roadNum++) {
 			simToText.writeToFile("\t" + roadNum + simToText.getNumberSuffix(roadNum) + " Road:\n", txtFile);
-			passageRights[roadNum-1] = roadList.get(roadNum - 1).road.get(0).getPassSuperiority();
+			
+			if (roadList.get(roadNum - 1).getVehicle(0) == null) {
+				System.out.println(999999111);
+			}
+			passageRights[roadNum-1] = roadList.get(roadNum - 1).getVehicle(0).getPassSuperiority();
 			int roadSize = roadList.get(roadNum - 1).getRoadSize();
 			if (roadSize == 0) {
 				simToText.writeToFile("Road is empty\n", txtFile);
 			}
 			else {
 				for (int vehicleIndex = 0; vehicleIndex < roadSize; vehicleIndex++) {
-					String vehicleType = roadList.get(roadNum - 1).road.get(vehicleIndex).getClassName();
-					String vehicleDirection = roadList.get(roadNum - 1).road.get(vehicleIndex).getVehicleDirection();
+					String vehicleType = roadList.get(roadNum - 1).getVehicle(vehicleIndex).getClassName();
+					String vehicleDirection = roadList.get(roadNum - 1).getVehicle(vehicleIndex).getVehicleDirection();
 
 					simToText.writeToFile("\t\t" + (vehicleIndex + 1) + ".  " + vehicleType + " (Go " + vehicleDirection + ")" +
-							roadList.get(roadNum - 1).road.get(vehicleIndex).getPassSuperiority() +"\n" , txtFile);
+							roadList.get(roadNum - 1).getVehicle(vehicleIndex).getPassSuperiority() +"\n" , txtFile);
 				}
 			}
 		}
@@ -51,7 +55,7 @@ public class Junction {
 		
 		while (!simulationOver) {
 			for (int roadNum = 1; roadNum <= 4; roadNum++) {
-				passageRights[roadNum - 1] = roadList.get(roadNum - 1).road.get(0).getPassSuperiority();
+				passageRights[roadNum - 1] = roadList.get(roadNum - 1).getVehicle(0).getPassSuperiority();
 			}
 			
 			if (hasPedesterian) {
@@ -108,6 +112,9 @@ public class Junction {
 			return maxSuperiorRoad;
 		}
 		else {
+			if (true) {
+				
+			}
 			System.out.println(isMaxSingle);
 			return 0;
 		}

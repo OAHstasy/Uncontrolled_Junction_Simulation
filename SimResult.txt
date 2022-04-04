@@ -1,26 +1,26 @@
 Vehicles:
 	1st Road:
-		1.  Car (Go Left)10
-		2.  Truck (Go Straight)10
-		3.  Bus (Go Left)10
-		4.  Motorcycle (Go Straight)10
-		5.  Car (Go Left)10
-		6.  Truck (Go Straight)10
+		1.  Car (Go Straight)10
+		2.  Car (Go Left)10
+		3.  Motorcycle (Go Left)10
+		4.  Bicycle (Go Left)-10
+		5.  Bus (Go Straight)10
+		6.  Car (Go Left)10
+		7.  Car (Go Straight)10
 	2nd Road:
 		1.  Motorcycle (Go Straight)10
-		2.  Truck (Go Straight)10
-		3.  Tractor (Go Straight)5
-	3rd Road:
-		1.  Car (Go Straight)10
 		2.  Tractor (Go Straight)5
+		3.  Car (Go Straight)10
+	3rd Road:
+		1.  Motorcycle (Go Left)10
+		2.  Truck (Go Right)10
 		3.  Car (Go Left)10
-		4.  Car (Go Straight)10
-		5.  Car (Go Left)10
-		6.  EngineeringVehicle (Go Right)5
-		7.  Car (Go Left)10
+		4.  EngineeringVehicle (Go Right)5
+		5.  EngineeringVehicle (Go Left)5
 	4th Road:
 		1.  Car (Go Right)10
-		2.  Car (Go Right)10
-		3.  Bicycle (Go Right)-10
+		2.  Motorcycle (Go Right)10
+		3.  Car (Go Right)10
 		4.  Car (Go Left)10
+		5.  Car (Go Right)10
 Right-of-way:

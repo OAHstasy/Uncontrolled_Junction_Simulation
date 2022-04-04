@@ -1,4 +1,7 @@
+import java.io.IOException;
 
 public class Simulation {
-	Junction junction = new Junction();
+	public static void main(String[] args) throws IOException {
+		Junction junction = new Junction();
+	}
 }

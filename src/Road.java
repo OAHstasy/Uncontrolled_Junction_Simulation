@@ -10,7 +10,7 @@ public class Road {
 		this.roadNumber = roadNumber;
 	}
 
-	List<IVehicle> road = new ArrayList<>();
+	private List<IVehicle> road = new ArrayList<>();
 	
 	public void addVehicleToRoad(IVehicle vehicle) {
 		road.add(vehicle);		
@@ -20,6 +20,10 @@ public class Road {
 		IVehicle vehicle = road.get(0);
 		road.remove(0);
 		return vehicle;
+	}
+	
+	public IVehicle getVehicle(int index) {
+		return road.get(index);
 	}
 	
 	public boolean hasPedestrian() {
