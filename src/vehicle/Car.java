@@ -1,9 +1,19 @@
 package vehicle;
 
 public class Car extends AMotorVehicle {
-
-	public Car() {
-		// TODO Auto-generated constructor stub
+	final String vehicleName = "Car";
+	public Car(int currentRoad, String vehicleDirection) {
+		super(currentRoad, vehicleDirection);
 	}
-
+	public String getVehicleName() { return this.vehicleName; }
+	@Override
+	public void setVehicleDirection() {
+		// TODO Auto-generated method stub
+		
+	}
+	@Override
+	public void setCurrentRoad() {
+		// TODO Auto-generated method stub
+		
+	}
 }
